@@ -44,8 +44,8 @@ class Producto
     }
 
 
-    private int _precio;
-    public int Precio
+    private double _precio;
+    public double Precio
     {
 
         get { return _precio; }
@@ -69,8 +69,8 @@ class Producto
 
     }
 
-    private double _cantidad;
-    public double Cantidad
+    private int _cantidad;
+    public int Cantidad
     {
 
 
@@ -101,10 +101,22 @@ class Producto
     }
 
 
+    //Propiedad de Solo Lectura//
+    public double ValorTotal 
+    {
+        get { return Precio * Cantidad;  }
+    }
 
-
-
-
+    //CONSTRUCTOR(RECIBE LOS DATOS E INICIA EL OBJETO//
+    public Producto(string Codigo, string Nombre, double Precio, int Cantidad) 
+    {
+    
+        this.Codigo = Codigo;
+        this.Nombre = Nombre;
+        this.Precio = Precio;
+        this.Cantidad = Cantidad; 
+    
+    }
 
 
 
