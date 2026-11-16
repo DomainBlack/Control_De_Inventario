@@ -118,9 +118,16 @@ class Producto
     
     }
 
-
-
-
+    //Metodo MostrarInfo()
+    public void MostrarInfo() 
+    {
+        Console.WriteLine("-------------------------");
+        Console.WriteLine("Codigo: " + Codigo);
+        Console.WriteLine("Nombre: " + Nombre);
+        Console.WriteLine("Precio: " + Precio);
+        Console.WriteLine("Cantidad: " + Cantidad);
+        Console.WriteLine("-------------------------");
+    }
 
 }
 
