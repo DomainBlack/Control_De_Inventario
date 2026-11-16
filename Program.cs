@@ -1,7 +1,4 @@
-﻿Console.WriteLine("---Control De Inventario De TecnoPunto---");
-
-
-//CREACION DE CLASES, CAMPOS Y CONFIGURACION DE GET Y SET//
+﻿//CREACION DE CLASES, CAMPOS Y CONFIGURACION DE GET Y SET//
 class Producto
 {
 
@@ -20,7 +17,7 @@ class Producto
     private string _nombre;
     public string Nombre
     {
-        get;
+        get { return _nombre; }
 
         set
         {
@@ -69,8 +66,8 @@ class Producto
 
     }
 
-    private int _cantidad;
-    public int Cantidad
+    private double _cantidad;
+    public double Cantidad
     {
 
 
@@ -108,7 +105,7 @@ class Producto
     }
 
     //CONSTRUCTOR(RECIBE LOS DATOS E INICIA EL OBJETO//
-    public Producto(string Codigo, string Nombre, double Precio, int Cantidad) 
+    public Producto(string Codigo, string Nombre, double Precio, double Cantidad) 
     {
     
         this.Codigo = Codigo;
@@ -121,15 +118,46 @@ class Producto
     //Metodo MostrarInfo()
     public void MostrarInfo() 
     {
-        Console.WriteLine("-------------------------");
+        Console.WriteLine("-----------------------------");
         Console.WriteLine("Codigo: " + Codigo);
         Console.WriteLine("Nombre: " + Nombre);
         Console.WriteLine("Precio: " + Precio);
         Console.WriteLine("Cantidad: " + Cantidad);
-        Console.WriteLine("-------------------------");
+        Console.WriteLine("Valor Total: " + ValorTotal);
+        Console.WriteLine("-----------------------------");
     }
 
 }
 
+//Metodo Main Para Interactuar con el usuario y crear objetos//
+class program
+{
 
+    static void Main(string[] args)
+    {
+
+        Console.WriteLine("---Control De Inventario De TecnoPunto---");
+
+        Console.WriteLine("Ingrese Codigo del producto: ");
+        string CodigoAgregado = Console.ReadLine();
+
+        Console.WriteLine("Ingrese Nombre del Producto: ");
+        string NombreAgregado = Console.ReadLine();
+
+        Console.WriteLine("Ingrese Precio del Producto: ");
+        double PrecioAgregado = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Ingrese Cantidad del Producto: ");
+        double CantidadAgregada = Convert.ToDouble(Console.ReadLine());
+
+    
+
+    Producto p = new Producto(CodigoAgregado, NombreAgregado, PrecioAgregado, CantidadAgregada);
+        p.MostrarInfo();
+
+
+    }
+
+
+}
 
