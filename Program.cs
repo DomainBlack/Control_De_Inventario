@@ -138,26 +138,39 @@ class program
 
         Console.WriteLine("---Control De Inventario De TecnoPunto---");
 
-        Console.WriteLine("Ingrese Codigo del producto: ");
-        string CodigoAgregado = Console.ReadLine();
+        while (true)
+        {
+            Console.WriteLine("Ingrese Codigo del producto: ");
+            string CodigoAgregado = Console.ReadLine();
 
-        Console.WriteLine("Ingrese Nombre del Producto: ");
-        string NombreAgregado = Console.ReadLine();
+            Console.WriteLine("Ingrese Nombre del Producto: ");
+            string NombreAgregado = Console.ReadLine();
 
-        Console.WriteLine("Ingrese Precio del Producto: ");
-        double PrecioAgregado = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese Precio del Producto: ");
+            double PrecioAgregado = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine("Ingrese Cantidad del Producto: ");
-        double CantidadAgregada = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Ingrese Cantidad del Producto: ");
+            double CantidadAgregada = Convert.ToDouble(Console.ReadLine());
 
-    
+            Console.WriteLine("Desea seguir agregando Productos? (s/n).");
+            string Respuesta = Console.ReadLine();
 
-    Producto p = new Producto(CodigoAgregado, NombreAgregado, PrecioAgregado, CantidadAgregada);
-        p.MostrarInfo();
+            if (Respuesta.ToLower() == "n")
+            {
+
+                break;
+
+            }
 
 
-    }
 
+            Producto p = new Producto(CodigoAgregado, NombreAgregado, PrecioAgregado, CantidadAgregada);
+            p.MostrarInfo();
+
+
+        }
+
+    } 
 
 }
 
