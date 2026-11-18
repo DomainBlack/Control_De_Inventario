@@ -11,19 +11,7 @@
 
 # Capturas de ejecucion requeridas
 
----EJECUCION EXITOSA
-(imagenes/exito.png)
-
-
-
----VALIDACION DE PRECIO(EJECUCION CON PRECIO NEGATIVO)
-(imagenes/negativo.png)
-
-
-
----VALIDACION DE NOMBRE(EJECUCION CON CAMPO NOMBRE VACIO)
-(imagenes/nombre.png)
-
-
----VALIDACION DE CANTIDAD(EJECUCION CON CAMPO CANTIDAD EN NEGATIVO)
-(imagenes/cantidad.png)
+![Ejecución Exitosa](imagenes/exito.png)
+![Validación Precio Negativo](imagenes/negativo.png)
+![Validación Nombre Vacío](imagenes/nombre.png)
+![Validación Cantidad Negativa](imagenes/cantidad.png)
